@@ -22,6 +22,13 @@ jobs:
       
       - name: setup-msbuild
         uses: microsoft/setup-msbuild@v1.0.1
+    
+      - name: Setup NuGet.exe for use with actions
+        uses: NuGet/setup-nuget@v1.0.2
+    
+      - name: Nuget Restore
+        working-directory: samplewebaspnetapp
+        run: nuget restore -Verbosity Detailed -NonInteractive
       
       - name: Build project with msbuild
         working-directory: samplewebaspnetapp
