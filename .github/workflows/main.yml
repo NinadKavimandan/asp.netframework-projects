@@ -37,6 +37,6 @@ jobs:
       - name: Deploy to azure
         uses: azure/webapps-deploy@v1
         with:
-          app-name: imnotawebappeither
+          app-name: imabsolutelynotawebapp
           package: samplewebaspnetapp/samplewebaspnetapp/obj/Release/Package
           publish-profile: ${{ secrets.AZURE_CREDENTIALS_GITHUB_SECRET }}
