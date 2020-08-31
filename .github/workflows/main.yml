@@ -22,8 +22,6 @@ jobs:
       
       - name: setup-msbuild
         uses: microsoft/setup-msbuild@v1.0.1
-        with:
-          vs-version: vs-2017
     
       - name: Setup NuGet.exe for use with actions
         uses: NuGet/setup-nuget@v1.0.2
@@ -40,5 +38,5 @@ jobs:
         uses: azure/webapps-deploy@v1
         with:
           app-name: imabsolutelynotawebapp
-          package: samplewebaspnetapp/samplewebaspnetapp/obj/Release/Package
+          package: samplewebaspnetapp/samplewebaspnetapp/obj/Release/Package/samplewebaspnetapp.zip
           publish-profile: ${{ secrets.AZURE_CREDENTIALS_GITHUB_SECRET }}
