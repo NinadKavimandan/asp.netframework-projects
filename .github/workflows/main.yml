@@ -38,5 +38,5 @@ jobs:
         uses: azure/webapps-deploy@v1
         with:
           app-name: imabsolutelynotawebapp
-          package: samplewebaspnetapp/samplewebaspnetapp/obj/Release/Package/PackageTmp
+          package: samplewebaspnetapp/samplewebaspnetapp/obj/Release/Package/samplewebaspnetapp.zip/
           publish-profile: ${{ secrets.AZURE_CREDENTIALS_GITHUB_SECRET }}
