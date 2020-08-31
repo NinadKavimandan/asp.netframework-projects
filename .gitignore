@@ -11,3 +11,5 @@
 /samplewebaspnetapp/samplewebaspnetapp/samplewebaspnetapp.csproj.user
 /samplewebaspnetapp/samplewebaspnetapp/Web.Release.config
 /samplewebaspnetapp/samplewebaspnetapp/Web.Debug.config
+/samplewebaspnetapp/WebApplication1/bin
+/samplewebaspnetapp/WebApplication1/obj/Release
