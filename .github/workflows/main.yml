@@ -32,7 +32,7 @@ jobs:
       
       - name: Build project with msbuild
         working-directory: samplewebaspnetapp
-        run: msbuild /t:samplewebaspnetapp/samplewebaspnetapp.csproj /t:"Clean" /p:platform="any cpu" /p:configuration="release" /p:DeployOnBuild=true /p:WebPublishMethod=Package
+        run: msbuild /t:samplewebaspnetapp /t:"Clean" /p:platform="any cpu" /p:configuration="release" /p:DeployOnBuild=true /p:WebPublishMethod=Package
 
       - name: Deploy to azure
         uses: azure/webapps-deploy@v1
