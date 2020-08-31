@@ -22,6 +22,8 @@ jobs:
       
       - name: setup-msbuild
         uses: microsoft/setup-msbuild@v1.0.1
+        with:
+          vs-version: vs-2017
     
       - name: Setup NuGet.exe for use with actions
         uses: NuGet/setup-nuget@v1.0.2
