@@ -32,11 +32,11 @@ jobs:
       
       - name: Build project with msbuild
         working-directory: samplewebaspnetapp
-        run: msbuild /t:samplewebaspnetapp /t:"Clean" /p:platform="any cpu" /p:configuration="release" /p:DeployOnBuild=true /p:WebPublishMethod=Package
+        run: msbuild /t:"Clean" /p:platform="any cpu" /p:configuration="release" /p:DeployOnBuild=true /p:WebPublishMethod=Package /p:PackageProjectName=samplewebaspnetapp
 
       - name: Deploy to azure
         uses: azure/webapps-deploy@v1
         with:
           app-name: imabsolutelynotawebapp
-          package: samplewebaspnetapp/samplewebaspnetapp/obj/Release/Package/*.zip
+          package: samplewebaspnetapp/samplewebaspnetapp/obj/Release/Package/PackageTmp
           publish-profile: ${{ secrets.AZURE_CREDENTIALS_GITHUB_SECRET }}
