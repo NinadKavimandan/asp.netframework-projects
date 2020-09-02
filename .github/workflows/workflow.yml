@@ -19,7 +19,7 @@ jobs:
     
       - name: Nuget Restore
         working-directory: samplewebaspnetapp/samplewebaspnetapp
-        run: nuget restore -Verbosity Detailed -NonInteractive -OutputDirectory Packages
+        run: nuget restore -Verbosity Detailed -NonInteractive -OutputDirectory ../packages
       
       - name: Build project with msbuild
         working-directory: samplewebaspnetapp/samplewebaspnetapp
