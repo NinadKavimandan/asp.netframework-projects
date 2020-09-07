@@ -23,7 +23,11 @@ jobs:
       
       - name: Build project with msbuild
         run: msbuild samplewebaspnetapp/WebApplication1/WebApplication1.csproj /p:Platform=AnyCpu /p:Configuration=Release /p:DeployOnBuild=true /p:WebPublishMethod=Package /p:PackageLocation=samplewebaspnetapp/publish
-
+      
+      - name: publish artifact
+        uses: actions/upload-artifact@v2.1.4
+        path: ***
+      
       - name: Deploy to azure
         uses: azure/webapps-deploy@v1
         with:
