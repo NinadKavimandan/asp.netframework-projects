@@ -22,7 +22,7 @@ jobs:
         run: nuget restore -Verbosity Detailed -NonInteractive
       
       - name: Build project with msbuild
-        run: msbuild samplewebaspnetapp/WebApplication1/WebApplication1.csproj /p:Platform=AnyCpu /p:Configuration=Release /p:DeployOnBuild=true /p:WebPublishMethod=Package /p:OutDir=samplewebaspnetapp/publish
+        run: msbuild samplewebaspnetapp/WebApplication1/WebApplication1.csproj /p:Platform=AnyCpu /p:Configuration=Release /p:DeployOnBuild=true /p:WebPublishMethod=Package /p:p:PackageFileName=samplewebaspnetapp/publish
 
       - name: Deploy to azure
         uses: azure/webapps-deploy@v1
