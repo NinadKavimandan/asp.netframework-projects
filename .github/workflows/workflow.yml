@@ -22,16 +22,11 @@ jobs:
         run: nuget restore -Verbosity Detailed -NonInteractive
       
       - name: Build project with msbuild
-        run: msbuild samplewebaspnetapp/WebApplication1/WebApplication1.csproj /p:Platform=AnyCpu /p:Configuration=Release /p:DeployOnBuild=true /p:WebPublishMethod=Package /p:PackageLocation=samplewebaspnetapp/publish
-      
-      - name: publish artifact
-        uses: actions/upload-artifact@v2.1.4
-        with: 
-          path: samplewebaspnetapp
+        run: msbuild samplewebaspnetapp/WebApplication1/WebApplication1.csproj /p:Platform=AnyCpu /p:Configuration=Release /p:DeployOnBuild=true /p:WebPublishMethod=Package
       
       - name: Deploy to azure
         uses: azure/webapps-deploy@v1
         with:
           app-name: ineverwasandneverwillbeawebapp
-          package: samplewebaspnetapp/publish
+          package: samplewebaspnetapp/WebApplication1/obj/Release/Publish/PublishTmp
           publish-profile: ${{ secrets.AZURE_CREDENTIALS_GITHUB_SECRET }}
