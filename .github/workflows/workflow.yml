@@ -26,7 +26,8 @@ jobs:
       
       - name: publish artifact
         uses: actions/upload-artifact@v2.1.4
-        path: ***
+        with: 
+          path: samplewebaspnetapp
       
       - name: Deploy to azure
         uses: azure/webapps-deploy@v1
