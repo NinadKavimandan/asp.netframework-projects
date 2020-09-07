@@ -28,5 +28,5 @@ jobs:
         uses: azure/webapps-deploy@v1
         with:
           app-name: ineverwasandneverwillbeawebapp
-          package: samplewebaspnetapp/WebApplication1/obj/Release/Publish/PublishTmp
+          package: samplewebaspnetapp/WebApplication1/obj/Release/Package/PackageTmp
           publish-profile: ${{ secrets.AZURE_CREDENTIALS_GITHUB_SECRET }}
